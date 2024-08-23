@@ -16,7 +16,11 @@ export const useIssuesStore = defineStore('issue', () => {
     //getters
     //Actions
     toggleLabel(labelName: string) {
-      console.log(labelName);
+      if (labels.value.includes(labelName)) {
+        labels.value = labels.value.filter((label) => label !== labelName);
+      } else {
+        labels.value.push(labelName);
+      }
     },
   };
 });

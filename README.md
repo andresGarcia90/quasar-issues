@@ -2,40 +2,44 @@
 
 Quassar App for github issues
 
-## Install the dependencies
+## 📜 Description
+
+List of issues of Github
+
+## 👨‍🚀 Tech Stack
+
+- VueJs
+- Quasar
+- VueQuery
+
+## ✅ Features
+
+- lorem
+- lorem
+- lorem
+
+## 🚀 Quick Start
+
+### Install the dependencies
+
 ```bash
 yarn
 # or
 npm install
 ```
 
+### Set Environment variables in .env file
+
+```
+GITHUB_TOKEN=github_token
+GITHUB_USER=facebook
+GITHUB_REPO=react
+
+
+```
+
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
+
 ```bash
 quasar dev
 ```
-
-
-### Lint the files
-```bash
-yarn lint
-# or
-npm run lint
-```
-
-
-### Format the files
-```bash
-yarn format
-# or
-npm run format
-```
-
-
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
