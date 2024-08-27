@@ -1,7 +1,10 @@
 <script setup>
+import useIssues from 'src/issue/composable/useIssues';
 import FilterSelector from 'src/components/filter-selector/FilterSelector.vue';
 import IssueList from 'src/components/issue-list/IssueList.vue';
 import LoaderSpinner from 'src/shared/components/LoaderSpinner.vue';
+
+const { issueQuery } = useIssues();
 </script>
 <template>
   <div class="row q-mb-md">
@@ -16,9 +19,8 @@ import LoaderSpinner from 'src/shared/components/LoaderSpinner.vue';
       <FilterSelector />
     </div>
     <div class="col-xs-12 col-md-8">
-      <!-- TODO: loader -->
-      <LoaderSpinner />
-      <IssueList />
+      <LoaderSpinner v-if="issueQuery.isLoading.value" />
+      <IssueList v-else :issues="issueQuery.data.value" />
     </div>
   </div>
 </template>

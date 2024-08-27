@@ -1,14 +1,9 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
-
-enum stateData {
-  all = '',
-  open = 'open',
-  closed = 'closed',
-}
+import { State } from 'src/issue/interface/issue';
 
 export const useIssuesStore = defineStore('issue', () => {
-  const state = ref(stateData.all); //all = '', open = 'open', closed = 'closed';
+  const state = ref(State.All); //all = '', open = 'open', closed = 'closed';
   const labels = ref<string[]>([]);
   return {
     state,
