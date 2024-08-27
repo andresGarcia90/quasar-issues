@@ -1,8 +1,8 @@
 <script setup lang="ts">
-// import useIssues from 'src/issue/composable/useIssues';
-import { Issue, State } from 'src/issue/interface/issue';
-import { timeSince } from 'src/shared/helpers/time-since';
 import { toRef } from 'vue';
+import { timeSince } from 'src/shared/helpers/time-since';
+import VueMarkdown from 'vue-markdown-render';
+import { Issue, State } from 'src/issue/interface/issue';
 interface Props {
   issue: Issue;
 }
@@ -60,7 +60,7 @@ const issue = toRef(props, 'issue');
     <q-separator />
 
     <q-item-section class="q-pa-md markdown-css">
-      <vue-markdow :source="issue.body || ''" />
+      <vue-markdown :source="issue.body || ''" />
     </q-item-section>
 
     <q-separator />
